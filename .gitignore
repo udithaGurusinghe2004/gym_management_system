@@ -1,0 +1,23 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio folder
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.cache
+*.log
+
+# NuGet packages (optional)
+packages/
+
+# OS files
+Thumbs.db
+Desktop.ini
