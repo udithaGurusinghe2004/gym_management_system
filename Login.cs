@@ -53,8 +53,8 @@ namespace gym_management_system
                 }
                 else if (role == "coach")
                 {
-                    //CoachDashboard coachForm = new CoachDashboard();
-                    //coachForm.Show();
+                    CoachDashboard cdb = new CoachDashboard();
+                    cdb.Show();
                 }
 
                 this.Hide();
