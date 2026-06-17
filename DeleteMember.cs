@@ -79,10 +79,5 @@ namespace gym_management_system
 
             dataGridView1.DataSource = DS.Tables[0];
         }
-
-        private void lblEnterId_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
