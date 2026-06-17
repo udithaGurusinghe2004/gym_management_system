@@ -20,15 +20,9 @@ namespace gym_management_system
 
         public void Clear()
         {
-            txtFname.Clear();
-            txtLname.Clear();
-            radioBtnFemale.Checked = false;
-            radioBtnMale.Checked = false;
-            txtMobile.Clear();
-            txtEmail.Clear();
-
-            dateTimePickerDOB.Value = DateTime.Now;
-            dateTimePickerHireDate.Value = DateTime.Now;
+            txtUsername.Clear();
+            txtpasswd.Clear();
+            cmbrole.Items.Clear();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -43,7 +37,7 @@ namespace gym_management_system
             cmd.Connection = con;
 
 
-            cmd.CommandText = "INSERT INTO User (UserName, Password, Role) VALUES (@uname, @psswd, @role)";
+            cmd.CommandText = "INSERT INTO [User] (UserName, Password, Role) VALUES (@uname, @psswd, @role)";
 
             cmd.Parameters.AddWithValue("@uname", uname);
             cmd.Parameters.AddWithValue("@psswd", psswd);

@@ -90,8 +90,8 @@
             // 
             this.cmbrole.FormattingEnabled = true;
             this.cmbrole.Items.AddRange(new object[] {
-            "Owner",
-            "Coach"});
+            "owner",
+            "coach"});
             this.cmbrole.Location = new System.Drawing.Point(349, 247);
             this.cmbrole.Name = "cmbrole";
             this.cmbrole.Size = new System.Drawing.Size(191, 24);
