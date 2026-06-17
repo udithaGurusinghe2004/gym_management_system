@@ -6,14 +6,15 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
-namespace GymManagementSystem
+namespace gym_management_system
 {
-    public partial class Form1 : Form
+    public partial class ReportGenerate : Form
     {
         // Replace this with your actual connection string
-        private string connectionString = "Server=YOUR_SERVER;Database=YOUR_DB;Integrated Security=True;";
+        private string connectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog=GymManagementSystem;Integrated Security=True";
 
-        public Form1()
+
+        public ReportGenerate()
         {
             InitializeComponent();
             // Required for QuestPDF 2022+
@@ -23,7 +24,7 @@ namespace GymManagementSystem
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             // 1. Fetch the data
-            DataTable memberData = GetGymData("SELECT * FROM Members");
+            DataTable memberData = GetGymData("SELECT * FROM Member");
 
             if (memberData.Rows.Count == 0)
             {
@@ -61,7 +62,7 @@ namespace GymManagementSystem
                 container.Page(page =>
                 {
                     page.Header().Text("Gym Management Report").FontSize(20).SemiBold().FontColor(Colors.Blue.Medium);
-
+                    page.Margin(20);
                     page.Content().PaddingVertical(10).Table(table =>
                     {
                         // Define columns
@@ -75,7 +76,12 @@ namespace GymManagementSystem
                         table.Header(header =>
                         {
                             foreach (DataColumn column in data.Columns)
-                                header.Cell().Border(1).Background(Colors.Grey.Lighten2).Padding(5).Text(column.ColumnName);
+                                header.Cell()
+                                    .Border(1)
+                                    .Background(Colors.Blue.Lighten3)
+                                    .Padding(5)
+                                    .Text(column.ColumnName)
+                                    .SemiBold();
                         });
 
                         // Rows

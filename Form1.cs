@@ -63,5 +63,11 @@ namespace gym_management_system
             AddAccount aa= new AddAccount();
             aa.Show();
         }
+
+        private void getmembertoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportGenerate rg = new ReportGenerate();
+            rg.Show();
+        }
     }
 }
