@@ -96,7 +96,6 @@
             // 
             // comboBoxMembership
             // 
-            this.comboBoxMembership.BackColor = System.Drawing.Color.Silver;
             this.comboBoxMembership.FormattingEnabled = true;
             this.comboBoxMembership.Items.AddRange(new object[] {
             "01 Month",
@@ -110,7 +109,6 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.BackColor = System.Drawing.Color.Silver;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Location = new System.Drawing.Point(663, 281);
             this.txtAddress.Name = "txtAddress";
@@ -120,7 +118,6 @@
             // 
             // comboBoxGymTime
             // 
-            this.comboBoxGymTime.BackColor = System.Drawing.Color.Silver;
             this.comboBoxGymTime.FormattingEnabled = true;
             this.comboBoxGymTime.Items.AddRange(new object[] {
             "05 : 00 AM - 10 : 00 AM",
@@ -174,7 +171,6 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Silver;
             this.txtEmail.Location = new System.Drawing.Point(669, 105);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(230, 22);
@@ -182,7 +178,6 @@
             // 
             // txtMobile
             // 
-            this.txtMobile.BackColor = System.Drawing.Color.Silver;
             this.txtMobile.Location = new System.Drawing.Point(205, 345);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(230, 22);
@@ -190,7 +185,6 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.BackColor = System.Drawing.Color.Silver;
             this.txtLastName.Location = new System.Drawing.Point(205, 163);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(230, 22);
@@ -198,7 +192,6 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.BackColor = System.Drawing.Color.Silver;
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Location = new System.Drawing.Point(205, 104);
             this.txtFirstName.Name = "txtFirstName";
