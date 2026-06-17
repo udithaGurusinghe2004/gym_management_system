@@ -48,10 +48,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.8, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.8\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +74,11 @@
     </Compile>
     <Compile Include="Equipment.Designer.cs">
       <DependentUpon>Equipment.cs</DependentUpon>
+    <Compile Include="DeleteMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMember.Designer.cs">
+      <DependentUpon>DeleteMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -81,12 +92,23 @@
     </Compile>
     <Compile Include="ViewEquipment.Designer.cs">
       <DependentUpon>ViewEquipment.cs</DependentUpon>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewStaff.Designer.cs">
+      <DependentUpon>NewStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchMember.cs">
@@ -104,12 +126,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteMember.resx">
+      <DependentUpon>DeleteMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewMember.resx">
       <DependentUpon>NewMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewStaff.resx">
+      <DependentUpon>NewStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +156,7 @@
     <EmbeddedResource Include="ViewEquipment.resx">
       <DependentUpon>ViewEquipment.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

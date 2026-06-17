@@ -74,6 +74,7 @@
             this.newStaffToolStripMenuItem.Name = "newStaffToolStripMenuItem";
             this.newStaffToolStripMenuItem.Size = new System.Drawing.Size(88, 33);
             this.newStaffToolStripMenuItem.Text = "New Staff";
+            this.newStaffToolStripMenuItem.Click += new System.EventHandler(this.newStaffToolStripMenuItem_Click);
             // 
             // equpmentToolStripMenuItem
             // 
@@ -88,6 +89,7 @@
             this.searchMemberToolStripMenuItem.Name = "searchMemberToolStripMenuItem";
             this.searchMemberToolStripMenuItem.Size = new System.Drawing.Size(127, 33);
             this.searchMemberToolStripMenuItem.Text = "Search Member";
+            this.searchMemberToolStripMenuItem.Click += new System.EventHandler(this.searchMemberToolStripMenuItem_Click);
             // 
             // deleteMemberToolStripMenuItem
             // 
@@ -95,6 +97,7 @@
             this.deleteMemberToolStripMenuItem.Name = "deleteMemberToolStripMenuItem";
             this.deleteMemberToolStripMenuItem.Size = new System.Drawing.Size(127, 33);
             this.deleteMemberToolStripMenuItem.Text = "Delete Member";
+            this.deleteMemberToolStripMenuItem.Click += new System.EventHandler(this.deleteMemberToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -102,6 +105,7 @@
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(74, 33);
             this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -109,6 +113,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 33);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 

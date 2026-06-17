@@ -37,25 +37,37 @@ namespace gym_management_system
                 gender = radioButton2.Text; 
             }
 
-            String dob = dateTimePickerDOB.Text;
-            Int64 mobile = Int64.Parse(txtMobile.Text);
+            DateTime dob = dateTimePickerDOB.Value;
+            String mobile =txtMobile.Text;
             String email = txtEmail.Text;
-            String joindate = dateTimePickerJoinDate.Text;  
+            DateTime joindate = dateTimePickerJoinDate.Value;  
             String gymTime = comboBoxGymTime.Text;  
             String address = txtAddress.Text;   
             String membership = comboBoxMembership.Text;    
 
 
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=LAPTOP-L9N7SQ3T;Initial Catalog=gym;Integrated Security=True";
+            con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "insert into NewMember (Fname,Lname,Gender,Dob,Mobile,Email,JoinDate,Gymtime,Maddress,MembershipTime) values ( '" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + mobile + "','" + email + "','" + joindate + "','" + gymTime + "','" + address + "','" + membership + "')";
+            cmd.CommandText = "insert into Member(Fname,Lname,Gender,DOB,Mobile,Email,JoinDate,Gymtime,Address,MembershipTime)" +
+                "VALUES(@fname, @lname, @gender, @dob, @mobile, @email, @joindate, @gymTime, @address, @membership)";
 
-            SqlDataAdapter DA = new SqlDataAdapter(cmd);
-            DataSet DS= new DataSet();
-            DA.Fill(DS);
+            cmd.Parameters.AddWithValue("@fname", fname);
+            cmd.Parameters.AddWithValue("@lname", lname);
+            cmd.Parameters.AddWithValue("@gender", gender);
+            cmd.Parameters.AddWithValue("@dob", dob);
+            cmd.Parameters.AddWithValue("@mobile", mobile);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@joindate", joindate);
+            cmd.Parameters.AddWithValue("@gymTime", gymTime);
+            cmd.Parameters.AddWithValue("@address", address);
+            cmd.Parameters.AddWithValue("@membership", membership);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
             MessageBox.Show("Data saved"); 
 
         }

@@ -34,11 +34,11 @@ namespace gym_management_system
 
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source=DESKTOP-9K5QG8P; database=gym_management_system; integrated security=True";
+                con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "delete from NewMember where MID = " + txtBox1.Text + "";
+                cmd.CommandText = "delete from Member where MID = " + textBox1.Text + "";
 
 
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
@@ -51,11 +51,11 @@ namespace gym_management_system
             {
                 this.Activate();
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source=DESKTOP-9K5QG8P; database=gym_management_system; integrated security=True";
+                con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select * from NewMember";
+                cmd.CommandText = "select * from Member";
 
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
@@ -67,11 +67,11 @@ namespace gym_management_system
         private void DeleteMember_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source=DESKTOP-9K5QG8P; database=gym_management_system; integrated security=True";
+            con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from NewMember";
+            cmd.CommandText = "select * from Member";
 
             SqlDataAdapter DA = new SqlDataAdapter(cmd);
             DataSet DS = new DataSet();

@@ -36,19 +36,19 @@ namespace gym_management_system
             {
                 gender = radioBtnFemale.Text;
             }
-            String dob = dateTimePickerDOB.Text;
+            DateTime dob = dateTimePickerDOB.Value;
             String mobile = txtMobile.Text;
             String email = txtEmail.Text;
-            String hiredate = dateTimePickerHireDate.Text;
+            DateTime hiredate = dateTimePickerHireDate.Value;
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "INSERT INTO NewStaff(Fanme,Lname,Gender,DOB,Mobile,Email,HiredDate)" +
+            cmd.CommandText = "INSERT INTO NewStaff(Fname,Lname,Gender,DOB,Mobile,Email,HiredDate)" +
                 "VALUES(@fname, @lname, @gender, @dob, @mobile, @email, @hiredate)";
-            //add paramters
+            
 
             cmd.Parameters.AddWithValue("@fname", fname);
             cmd.Parameters.AddWithValue ("@lname", lname);
@@ -62,6 +62,10 @@ namespace gym_management_system
             cmd.ExecuteNonQuery();
             con.Close();
             Clear();
+
+            guna2MessageDialog1.Text = "Data saved successfully!";
+            guna2MessageDialog1.Caption = "Success";
+            guna2MessageDialog1.Show();
         }
         public void Clear()
         {

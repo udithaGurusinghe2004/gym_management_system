@@ -26,7 +26,7 @@ namespace gym_management_system
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
             {
-                form1 fm = new Form();
+                Form1 fm = new Form1();
                 fm.Show();
                 this.Hide();
             }
@@ -35,6 +35,11 @@ namespace gym_management_system
             {
                 MessageBox.Show("Incorrect Username or Password","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
