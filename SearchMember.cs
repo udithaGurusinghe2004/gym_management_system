@@ -17,33 +17,6 @@ namespace gym_management_system
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (txtSearch.Text != "")
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
-
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                cmd.CommandText = "select * from NewMember where MID = '" + txtSearch.Text + "'";
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-               // dataGridView1.DataSource = DS.Tables[0];
-            }
-            else
-            {
-                MessageBox.Show("Please enter some id", "Message",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-           
-        }
-
         private void SearchMember_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
@@ -52,13 +25,43 @@ namespace gym_management_system
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from NewMember where MID = '" + txtSearch.Text + "'";
+            cmd.CommandText = "select * from Member where MID = '" + txtSearch.Text + "'";
             SqlDataAdapter DA = new SqlDataAdapter(cmd);
             DataSet DS = new DataSet();
             DA.Fill(DS);
 
             dataGridView1.DataSource = DS.Tables[0];
             
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            if (txtSearch.Text != "")
+            {
+                SqlConnection con = new SqlConnection(
+                    "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog=GymManagementSystem;Integrated Security=True"
+                );
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "SELECT * FROM Member WHERE MID = @id";
+                cmd.Parameters.AddWithValue("@id", txtSearch.Text);
+
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+
+                DA.Fill(DS);
+
+                dataGridView1.DataSource = DS.Tables[0];
+            }
+            else
+            {
+                MessageBox.Show("Please enter some id", "Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }
