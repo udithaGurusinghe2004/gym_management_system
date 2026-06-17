@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoachDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoachDashboard.Designer.cs">
+      <DependentUpon>CoachDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoachDashboard.resx">
+      <DependentUpon>CoachDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteMember.resx">
       <DependentUpon>DeleteMember.cs</DependentUpon>

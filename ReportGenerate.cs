@@ -94,5 +94,15 @@ namespace gym_management_system
                 });
             }).GeneratePdf(filePath);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportGenerate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
