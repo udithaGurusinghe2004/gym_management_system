@@ -60,6 +60,18 @@
     <Compile Include="DeleteMember.Designer.cs">
       <DependentUpon>DeleteMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipments.Designer.cs">
+      <DependentUpon>Equipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentsView.Designer.cs">
+      <DependentUpon>EquipmentsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteMember.resx">
       <DependentUpon>DeleteMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipments.resx">
+      <DependentUpon>Equipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipmentsView.resx">
+      <DependentUpon>EquipmentsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
