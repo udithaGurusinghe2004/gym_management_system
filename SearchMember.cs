@@ -20,47 +20,45 @@ namespace gym_management_system
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*if (txtSearch.Text != "")
+            if (txtSearch.Text != "")
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = gym; integrated security=True";
+                con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
                 cmd.CommandText = "select * from NewMember where MID = '" + txtSearch.Text + "'";
 
-                SqlDataAdapter DA = new SqlDataAdapter(cmd);
-                DataSet DS = new DataSet();
-                DA.Fill(DS);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
 
                 dataGridView1.DataSource = DS.Tables[0];
             }
-else
+            else
             {
                 MessageBox.Show("Please enter some id", "Message",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            */
+           
         }
 
         private void SearchMember_Load(object sender, EventArgs e)
         {
-            /*
-             SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = gym; integrated security=True";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
 
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
 
-                cmd.CommandText = "select * from NewMember where MID = '" + txtSearch.Text + "'";
+            cmd.CommandText = "select * from NewMember where MID = '" + txtSearch.Text + "'";
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
 
-                SqlDataAdapter DA = new SqlDataAdapter(cmd);
-                DataSet DS = new DataSet();
-                DA.Fill(DS);
-
-                dataGridView1.DataSource = DS.Tables[0];
-            */
+            dataGridView1.DataSource = DS.Tables[0];
+            
         }
     }
 }
