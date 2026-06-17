@@ -27,5 +27,34 @@ namespace gym_management_system
             NewMember nm = new NewMember();
             nm.Show();
         }
+
+        private void newStaffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewStaff ns = new NewStaff();
+            ns.Show();
+        }
+
+        private void searchMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchMember sm = new SearchMember();
+            sm.Show();
+        }
+
+        private void deleteMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteMember dm = new DeleteMember();
+            dm.Show();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace gym_management_system
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "delete from NewMember where MID = " + txtBox1.Text + "";
+                cmd.CommandText = "delete from NewMember where MID = " + textBox1.Text + "";
 
 
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
