@@ -84,5 +84,10 @@ namespace gym_management_system
         {
             Clear();
         }
+
+        private void NewStaff_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

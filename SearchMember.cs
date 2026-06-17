@@ -63,5 +63,10 @@ namespace gym_management_system
             }
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
