@@ -71,10 +71,5 @@ namespace gym_management_system
             MessageBox.Show("Data saved"); 
 
         }
-
-        private void NewMember_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
