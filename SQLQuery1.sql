@@ -1,8 +1,0 @@
-﻿CREATE TABLE Equipment (
-    EID INT IDENTITY(1,1) PRIMARY KEY,
-    EquipName NVARCHAR(150) NOT NULL,
-    EDescription NVARCHAR(MAX),
-    MUsed NVARCHAR(150),
-    DDate DATETIME,
-    Cost MONEY
-);
