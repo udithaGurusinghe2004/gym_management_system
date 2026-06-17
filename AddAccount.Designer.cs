@@ -39,6 +39,7 @@
             this.btnreset = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closecirclebtn = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,11 +149,29 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(795, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(795, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(209, 57);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // closecirclebtn
+            // 
+            this.closecirclebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closecirclebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closecirclebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closecirclebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closecirclebtn.FillColor = System.Drawing.Color.Red;
+            this.closecirclebtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closecirclebtn.ForeColor = System.Drawing.Color.White;
+            this.closecirclebtn.Location = new System.Drawing.Point(974, 0);
+            this.closecirclebtn.Name = "closecirclebtn";
+            this.closecirclebtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closecirclebtn.Size = new System.Drawing.Size(33, 30);
+            this.closecirclebtn.TabIndex = 11;
+            this.closecirclebtn.Text = "x";
+            this.closecirclebtn.TextFormatNoPrefix = true;
+            this.closecirclebtn.Click += new System.EventHandler(this.closecirclebtn_Click);
             // 
             // AddAccount
             // 
@@ -160,6 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1007, 553);
+            this.Controls.Add(this.closecirclebtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnreset);
@@ -170,7 +190,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddAccount";
             this.Text = "addUser";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -191,6 +211,7 @@
         private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2CircleButton closecirclebtn;
     }
 }
 

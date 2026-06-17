@@ -71,5 +71,10 @@ namespace gym_management_system
             MessageBox.Show("Data saved"); 
 
         }
+
+        private void closecirclebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
