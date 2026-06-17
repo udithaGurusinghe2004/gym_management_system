@@ -84,5 +84,10 @@ namespace gym_management_system
         {
             Clear();
         }
+
+        private void closecirclebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

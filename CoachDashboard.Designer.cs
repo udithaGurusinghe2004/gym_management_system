@@ -32,10 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getmembertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.getmembertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             this.newMemberToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.newMemberToolStripMenuItem.Name = "newMemberToolStripMenuItem";
-            this.newMemberToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
+            this.newMemberToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.newMemberToolStripMenuItem.Text = "New Member";
             this.newMemberToolStripMenuItem.Click += new System.EventHandler(this.newMemberToolStripMenuItem_Click);
             // 
@@ -68,15 +68,23 @@
             // 
             this.searchMemberToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.searchMemberToolStripMenuItem.Name = "searchMemberToolStripMenuItem";
-            this.searchMemberToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.searchMemberToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.searchMemberToolStripMenuItem.Text = "Search Member";
             this.searchMemberToolStripMenuItem.Click += new System.EventHandler(this.searchMemberToolStripMenuItem_Click);
+            // 
+            // getmembertoolStripMenuItem
+            // 
+            this.getmembertoolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
+            this.getmembertoolStripMenuItem.Name = "getmembertoolStripMenuItem";
+            this.getmembertoolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.getmembertoolStripMenuItem.Text = "Get Member Report";
+            this.getmembertoolStripMenuItem.Click += new System.EventHandler(this.getmembertoolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -84,7 +92,7 @@
             // 
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -99,14 +107,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // getmembertoolStripMenuItem
-            // 
-            this.getmembertoolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
-            this.getmembertoolStripMenuItem.Name = "getmembertoolStripMenuItem";
-            this.getmembertoolStripMenuItem.Size = new System.Drawing.Size(155, 26);
-            this.getmembertoolStripMenuItem.Text = "Get Member Report";
-            this.getmembertoolStripMenuItem.Click += new System.EventHandler(this.getmembertoolStripMenuItem_Click);
-            // 
             // CoachDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -119,6 +119,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "CoachDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CoachDashboard";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

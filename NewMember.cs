@@ -17,6 +17,21 @@ namespace gym_management_system
         {
             InitializeComponent();
         }
+        public void Clear()
+        {
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            txtMobile.Clear();
+            txtEmail.Clear();
+            comboBoxGymTime.SelectedIndex = 0;
+            txtAddress.Clear();
+            comboBoxMembership.SelectedIndex = 0;
+
+            dateTimePickerDOB.Value = DateTime.Now;
+            dateTimePickerJoinDate.Value = DateTime.Now;
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -68,8 +83,19 @@ namespace gym_management_system
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+            Clear();
             MessageBox.Show("Data saved"); 
 
+        }
+
+        private void closecirclebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }

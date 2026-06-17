@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closecirclebtn = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,9 +143,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.label5.Location = new System.Drawing.Point(209, 318);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 21);
+            this.label5.Size = new System.Drawing.Size(123, 21);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Delivery Date";
+            this.label5.Text = "Purchased Date";
             // 
             // label4
             // 
@@ -194,11 +195,29 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(786, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(795, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(209, 57);
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
+            // 
+            // closecirclebtn
+            // 
+            this.closecirclebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closecirclebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closecirclebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closecirclebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closecirclebtn.FillColor = System.Drawing.Color.Red;
+            this.closecirclebtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closecirclebtn.ForeColor = System.Drawing.Color.White;
+            this.closecirclebtn.Location = new System.Drawing.Point(974, 0);
+            this.closecirclebtn.Name = "closecirclebtn";
+            this.closecirclebtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closecirclebtn.Size = new System.Drawing.Size(33, 30);
+            this.closecirclebtn.TabIndex = 30;
+            this.closecirclebtn.Text = "x";
+            this.closecirclebtn.TextFormatNoPrefix = true;
+            this.closecirclebtn.Click += new System.EventHandler(this.closecirclebtn_Click);
             // 
             // Equipments
             // 
@@ -206,6 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1007, 553);
+            this.Controls.Add(this.closecirclebtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnViewEq);
             this.Controls.Add(this.btnReset);
@@ -221,8 +241,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Equipments";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Equipments";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -247,5 +268,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2CircleButton closecirclebtn;
     }
 }

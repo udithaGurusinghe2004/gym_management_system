@@ -69,5 +69,11 @@ namespace gym_management_system
             ReportGenerate rg = new ReportGenerate();
             rg.Show();
         }
+
+        private void equpmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Equipments eq= new Equipments();
+            eq.Show();
+        }
     }
 }
