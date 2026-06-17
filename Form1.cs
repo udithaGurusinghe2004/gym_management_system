@@ -50,6 +50,7 @@ namespace gym_management_system
         {
             Login lg = new Login();
             lg.Show();
+            this.Hide();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
