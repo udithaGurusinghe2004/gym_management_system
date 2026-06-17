@@ -26,7 +26,7 @@ namespace gym_management_system
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
             {
-                Form fm = new Form();
+                Form1 fm = new Form1();
                 fm.Show();
                 this.Hide();
             }
