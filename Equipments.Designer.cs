@@ -143,9 +143,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.label5.Location = new System.Drawing.Point(209, 318);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 21);
+            this.label5.Size = new System.Drawing.Size(123, 21);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Delivery Date";
+            this.label5.Text = "Purchased Date";
             // 
             // label4
             // 
@@ -243,6 +243,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Equipments";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Equipments";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

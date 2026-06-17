@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1007, 553);
+            this.ClientSize = new System.Drawing.Size(1025, 600);
             this.Controls.Add(this.closecirclebtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -221,6 +221,7 @@
             this.MaximumSize = new System.Drawing.Size(1025, 600);
             this.MinimumSize = new System.Drawing.Size(1025, 600);
             this.Name = "Login";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -36,10 +36,10 @@
             this.searchMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getmembertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.getmembertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +88,7 @@
             this.equpmentToolStripMenuItem.Name = "equpmentToolStripMenuItem";
             this.equpmentToolStripMenuItem.Size = new System.Drawing.Size(95, 33);
             this.equpmentToolStripMenuItem.Text = "Equipment";
+            this.equpmentToolStripMenuItem.Click += new System.EventHandler(this.equpmentToolStripMenuItem_Click);
             // 
             // searchMemberToolStripMenuItem
             // 
@@ -112,6 +113,14 @@
             this.deleteMemberToolStripMenuItem.Size = new System.Drawing.Size(127, 33);
             this.deleteMemberToolStripMenuItem.Text = "Delete Member";
             this.deleteMemberToolStripMenuItem.Click += new System.EventHandler(this.deleteMemberToolStripMenuItem_Click);
+            // 
+            // getmembertoolStripMenuItem
+            // 
+            this.getmembertoolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
+            this.getmembertoolStripMenuItem.Name = "getmembertoolStripMenuItem";
+            this.getmembertoolStripMenuItem.Size = new System.Drawing.Size(155, 33);
+            this.getmembertoolStripMenuItem.Text = "Get Member Report";
+            this.getmembertoolStripMenuItem.Click += new System.EventHandler(this.getmembertoolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -139,14 +148,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(297, 67);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // getmembertoolStripMenuItem
-            // 
-            this.getmembertoolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
-            this.getmembertoolStripMenuItem.Name = "getmembertoolStripMenuItem";
-            this.getmembertoolStripMenuItem.Size = new System.Drawing.Size(155, 33);
-            this.getmembertoolStripMenuItem.Text = "Get Member Report";
-            this.getmembertoolStripMenuItem.Click += new System.EventHandler(this.getmembertoolStripMenuItem_Click);
             // 
             // Form1
             // 

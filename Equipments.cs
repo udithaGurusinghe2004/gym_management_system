@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,44 +17,7 @@ namespace gym_management_system
         {
             InitializeComponent();
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            string EquipName = txtEquipName.Text;
-            string Description = txtDescription.Text;
-            string MUsed = txtMusclesUsed.Text;
-            string DDate = dateTimePickerDeliveryDate.Text;
-            Int64 cost = Int64.Parse(txtCost.Text);
-
-            /*
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Equipments;Integrated Security=True";
-
-                string query = "INSERT INTO NewStaff (Fname, Lname, Gender, Dob, Mobile, Email, JoinDate, Statee, City) VALUES (@fname, @lname, @gender, @dob, @mobile, @email, @jdate, @state, @city)";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-             {
-                cmd.Parameters.AddWithValue("@fname", txtFname.Text);
-                cmd.Parameters.AddWithValue("@lname", txtLname.Text);
-                cmd.Parameters.AddWithValue("@gender", txtGender.Text);
-                cmd.Parameters.AddWithValue("@dob", txtDob.Text);
-                cmd.Parameters.AddWithValue("@mobile", txtMobile.Text);
-                cmd.Parameters.AddWithValue("@email", txtEmail.Text);
-                cmd.Parameters.AddWithValue("@jdate", txtJoinDate.Text);
-                cmd.Parameters.AddWithValue("@state", txtState.Text);
-                cmd.Parameters.AddWithValue("@city", txtCity.Text);
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-             }
-
-                MessageBox.Show("Data saved.", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-             */
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
+        public void Clear()
         {
             txtEquipName.Clear();
             txtDescription.Clear();
@@ -62,9 +26,48 @@ namespace gym_management_system
             dateTimePickerDeliveryDate.Value = DateTime.Now;
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string ename = txtEquipName.Text;
+            string desc = txtDescription.Text;
+            string mused = txtMusclesUsed.Text;
+            DateTime pdate = dateTimePickerDeliveryDate.Value;
+            Int64 cost = Int64.Parse(txtCost.Text);
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "INSERT INTO Equipment(EquipmentName, Description, MuscleUsed, PurchasedDate, Cost)" +
+               "VALUES(@ename, @desc, @mused, @pdate, @cost)";
+
+                cmd.Parameters.AddWithValue("@ename", ename);
+                cmd.Parameters.AddWithValue("@desc", desc);
+                cmd.Parameters.AddWithValue("@mused", mused);
+                cmd.Parameters.AddWithValue("@pdate", pdate);
+                cmd.Parameters.AddWithValue("@cost", cost);
+                
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Clear();
+
+                MessageBox.Show("Data saved.", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+             
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
         private void btnViewEq_Click(object sender, EventArgs e)
         {
-
+            EquipmentView ev = new EquipmentView();
+            ev.Show();
         }
 
         private void closecirclebtn_Click(object sender, EventArgs e)
