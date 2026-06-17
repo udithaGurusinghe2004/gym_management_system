@@ -85,12 +85,6 @@
       <DependentUpon>NewStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportGenerate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportGenerate.Designer.cs">
-      <DependentUpon>ReportGenerate.cs</DependentUpon>
-    </Compile>
     <Compile Include="SearchMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReportGenerate.resx">
-      <DependentUpon>ReportGenerate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SearchMember.resx">
       <DependentUpon>SearchMember.cs</DependentUpon>
     </EmbeddedResource>
