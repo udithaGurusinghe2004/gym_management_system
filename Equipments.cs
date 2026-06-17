@@ -61,5 +61,10 @@ namespace gym_management_system
             txtCost.Clear();
             dateTimePickerDeliveryDate.Value = DateTime.Now;
         }
+
+        private void Equipments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
