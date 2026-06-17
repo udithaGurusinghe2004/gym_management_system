@@ -36,10 +36,10 @@ namespace gym_management_system
             {
                 gender = radioBtnFemale.Text;
             }
-            String dob = dateTimePickerDOB.Text;
+            DateTime dob = dateTimePickerDOB.Value;
             String mobile = txtMobile.Text;
             String email = txtEmail.Text;
-            String hiredate = dateTimePickerHireDate.Text;
+            DateTime hiredate = dateTimePickerHireDate.Value;
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=LAPTOP-LSVNQANK\\SQLEXPRESS;Initial Catalog= GymManagementSystem;Integrated Security=True";
@@ -48,7 +48,7 @@ namespace gym_management_system
 
             cmd.CommandText = "INSERT INTO NewStaff(Fanme,Lname,Gender,DOB,Mobile,Email,HiredDate)" +
                 "VALUES(@fname, @lname, @gender, @dob, @mobile, @email, @hiredate)";
-            //add paramters
+            
 
             cmd.Parameters.AddWithValue("@fname", fname);
             cmd.Parameters.AddWithValue ("@lname", lname);
