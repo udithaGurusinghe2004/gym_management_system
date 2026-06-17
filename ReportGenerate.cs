@@ -11,7 +11,7 @@ namespace GymManagementSystem
     public partial class Form1 : Form
     {
         // Replace this with your actual connection string
-        private string connectionString = "Server=YOUR_SERVER;Database=YOUR_DB;Integrated Security=True;";
+        private string connectionString = "Data Source = LAPTOP - LSVNQANK\\SQLEXPRESS;Initial Catalog = GymManagementSystem; Integrated Security = True";
 
         public Form1()
         {
@@ -23,7 +23,7 @@ namespace GymManagementSystem
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             // 1. Fetch the data
-            DataTable memberData = GetGymData("SELECT * FROM Members");
+            DataTable memberData = GetGymData("SELECT * FROM Member");
 
             if (memberData.Rows.Count == 0)
             {
@@ -87,6 +87,11 @@ namespace GymManagementSystem
                     });
                 });
             }).GeneratePdf(filePath);
+        }
+
+        private void btnGenerate_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
