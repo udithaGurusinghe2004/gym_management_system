@@ -34,11 +34,12 @@
             this.newStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equpmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getmembertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             this.searchMemberToolStripMenuItem,
             this.deleteAccountToolStripMenuItem,
             this.deleteMemberToolStripMenuItem,
+            this.getmembertoolStripMenuItem,
             this.logOutToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -95,6 +97,14 @@
             this.searchMemberToolStripMenuItem.Text = "Search Member";
             this.searchMemberToolStripMenuItem.Click += new System.EventHandler(this.searchMemberToolStripMenuItem_Click);
             // 
+            // deleteAccountToolStripMenuItem
+            // 
+            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
+            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(124, 33);
+            this.deleteAccountToolStripMenuItem.Text = "Create Account";
+            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
+            // 
             // deleteMemberToolStripMenuItem
             // 
             this.deleteMemberToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
@@ -130,13 +140,13 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // deleteAccountToolStripMenuItem
+            // getmembertoolStripMenuItem
             // 
-            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
-            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
-            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(124, 33);
-            this.deleteAccountToolStripMenuItem.Text = "Create Account";
-            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
+            this.getmembertoolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
+            this.getmembertoolStripMenuItem.Name = "getmembertoolStripMenuItem";
+            this.getmembertoolStripMenuItem.Size = new System.Drawing.Size(155, 33);
+            this.getmembertoolStripMenuItem.Text = "Get Member Report";
+            this.getmembertoolStripMenuItem.Click += new System.EventHandler(this.getmembertoolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -176,5 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getmembertoolStripMenuItem;
     }
 }
