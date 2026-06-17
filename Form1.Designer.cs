@@ -38,6 +38,7 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             this.newStaffToolStripMenuItem,
             this.equpmentToolStripMenuItem,
             this.searchMemberToolStripMenuItem,
+            this.deleteAccountToolStripMenuItem,
             this.deleteMemberToolStripMenuItem,
             this.logOutToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -82,8 +84,8 @@
             // 
             this.equpmentToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.equpmentToolStripMenuItem.Name = "equpmentToolStripMenuItem";
-            this.equpmentToolStripMenuItem.Size = new System.Drawing.Size(91, 33);
-            this.equpmentToolStripMenuItem.Text = "Equpment";
+            this.equpmentToolStripMenuItem.Size = new System.Drawing.Size(95, 33);
+            this.equpmentToolStripMenuItem.Text = "Equipment";
             // 
             // searchMemberToolStripMenuItem
             // 
@@ -128,6 +130,14 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // deleteAccountToolStripMenuItem
+            // 
+            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
+            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(124, 33);
+            this.deleteAccountToolStripMenuItem.Text = "Create Account";
+            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,5 +175,6 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
     }
 }

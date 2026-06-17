@@ -57,5 +57,11 @@ namespace gym_management_system
         {
             this.Close();
         }
+
+        private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddAccount aa= new AddAccount();
+            aa.Show();
+        }
     }
 }
