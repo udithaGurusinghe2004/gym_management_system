@@ -46,7 +46,7 @@ namespace gym_management_system
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "INSERT INTO NewStaff(Fanme,Lname,Gender,DOB,Mobile,Email,HiredDate)" +
+            cmd.CommandText = "INSERT INTO NewStaff(Fname,Lname,Gender,DOB,Mobile,Email,HiredDate)" +
                 "VALUES(@fname, @lname, @gender, @dob, @mobile, @email, @hiredate)";
             
 
@@ -62,6 +62,10 @@ namespace gym_management_system
             cmd.ExecuteNonQuery();
             con.Close();
             Clear();
+
+            guna2MessageDialog1.Text = "Data saved successfully!";
+            guna2MessageDialog1.Caption = "Success";
+            guna2MessageDialog1.Show();
         }
         public void Clear()
         {

@@ -34,7 +34,7 @@ namespace gym_management_system
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                dataGridView1.DataSource = DS.Tables[0];
+               // dataGridView1.DataSource = DS.Tables[0];
             }
             else
             {
